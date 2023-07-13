@@ -56,21 +56,18 @@ mixin CropPreviewMixin<T extends StatefulWidget> on State<T> {
     CropBoundaries boundary, {
     bool showGrid = false,
   }) {
-    return Container(
-      color: Colors.blue,
-      child: SizedBox.fromSize(
-        size: layout,
-        child: CropTransformWithAnimation(
-          shouldAnimate: layout != Size.zero,
-          transform: transform,
-          child: VideoViewer(
-            controller: controller,
-            child: buildPaint(
-              controller,
-              boundary: boundary,
-              showGrid: showGrid,
-              showCenterRects: controller.preferredCropAspectRatio == null,
-            ),
+    return SizedBox.fromSize(
+      size: layout,
+      child: CropTransformWithAnimation(
+        shouldAnimate: layout != Size.zero,
+        transform: transform,
+        child: VideoViewer(
+          controller: controller,
+          child: buildPaint(
+            controller,
+            boundary: boundary,
+            showGrid: showGrid,
+            showCenterRects: controller.preferredCropAspectRatio == null,
           ),
         ),
       ),
