@@ -364,7 +364,6 @@ class _CropGridViewerState extends State<CropGridViewer> with CropPreviewMixin {
   /// Paint rect on top of the video area outside of the crop rect
   Widget _buildCropView(TransformData transform) {
     return Container(
-      color: Colors.pink,
       child: Padding(
         padding: widget.margin,
         child: buildVideoView(
