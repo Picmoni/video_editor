@@ -18,8 +18,7 @@ class VideoViewer extends StatelessWidget {
           controller.video.play();
         }
       },
-      child: Container(
-        color: Colors.blue,
+      child: Center(
         child: Stack(
           children: [
             AspectRatio(
